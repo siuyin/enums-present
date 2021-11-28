@@ -52,8 +52,8 @@ when encoded as JSON.
 
 .link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPHgA2wMlAAmASxIAuWAhTooAXmVI0qAHTFyFANx4AxnBCo4E3WLgBzABQApVgHlCugSVkh7sgDMAT0c5EgBKcJNcPFBIKAAReVYyHz8sWiJSSg0oACJCNwAlABUACTzuKAYBXLy6AEFWEsrM9k4KOvcAVXLWlj5azTyeOmb+kRjcCSkwgCYlJJIUtPtcpZXfe31s4zMLKxs7J1cPL1StwJD5yKMgA enum-json
 
-## Go enums seriaised to JSON
+## Go enums serialised to JSON
 .play -edit cmd/serial/main.go
 
-## Go enums seriaised with gob encoding
+## Go enums serialised with gob encoding
 .play -edit cmd/gob/main.go /var network/,/^}/
