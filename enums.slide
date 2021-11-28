@@ -1,0 +1,43 @@
+# Comparing enumerations
+in Go and Typescript
+28 Nov 2021
+
+Loh Siu Yin
+Engineering Manager, Xendit
+siuyin@xendit.co
+
+## Why enums?
+A compass direction may be represented by a string,
+say, "North".
+
+In some cases it may be helpful to restrict the values, say,
+to North, East, South, West.
+
+## enums in TypeScript
+Let's explore enums in TypeScript.
+
+Click on the link below which will bring us to the TypeScript Playground
+(internet connection required).
+
+.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPKNyhIUACIBLEqzIkZIAOZZaRUpSgBeKACJCAeQBKAFQAS+7lAYDdBugEFWZ6xvacKD-ayMBVS3cWPns9fR46V2CRXDwAG2AyKAATOQd4JDRUADpicgoAbjwAYzgQVDhEnPi4FQAKMgBPRGA4ADN6tJIASipUuR7iuNxE5O6MPVl5RWUVHLsyYbKKquAausaWts6JvoGSVB68AHoTiYduoA enum-demo
+
+## enums in Go
+.play -edit cmd/enum/main.go
+
+## package: compass
+Go does not have an enum keyword.
+Instead enums in Go can be implemented by integer constants.
+
+iota in Go provides a auto-incrementing integer constant which starts at 0 (zero).
+
+.code compass/compass.go
+
+## Type Safety: TypeScript enums
+Let's see if TypeScript can tell the difference between an enum
+and a number.
+
+.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPHgA2wMlAAmASxJQAvLAQp0AOmLkKAbgIB6fVDIkAnjPkAuFUjSo8chcoBMOvAGM4IVHAnqxcADmABRkpojAcABmwY4AlFTxbrhAA type-safety
+
+## Type Safety: Go enums
+
+.play -edit cmd/typesafe/main.go
