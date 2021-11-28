@@ -36,8 +36,24 @@ iota in Go provides a auto-incrementing integer constant which starts at 0 (zero
 Let's see if TypeScript can tell the difference between an enum
 and a number.
 
-.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPHgA2wMlAAmASxJQAvLAQp0AOmLkKAbgIB6fVDIkAnjPkAuFUjSo8chcoBMOvAGM4IVHAnqxcADmABRkpojAcABmwY4AlFTxbrhAA type-safety
+.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPHgA2wMlAAmASxJQAvLAQp0AOmLkKAbgIB6fVDIkAnjPkAuFUjSo8chcoBMOvAGM4IVHAnqxcADmABRkpojAcABmwY4AlFTxbrhAA num-safe
+
+How about an string enum an different string?
+
+.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAIglgJwMoBcFxAcygbwLABQUUAcgPYIoAWUAvFAEQkDyASgCoASDANIcQFEAhgGcUdRgICCSdr35QkZMNQkMkzAKpd5RKAHVgYtfoGzdAX0KEANsHEATRBPjI0GTADpylKoScIEgDk0rJBANxQAPRRUCBkAO5QaACesIio6FiewsaEAMZkICJkdp42ZJgAFCgpAA7AZABmVQEAlDzt4YRAA string-safe
 
 ## Type Safety: Go enums
 
 .play -edit cmd/typesafe/main.go
+
+## TypeScript enums serialised to JSON
+Let's explore how TypeScript enums look like on the wire
+when encoded as JSON.
+
+.link https://www.typescriptlang.org/play?#code/KYOwrgtgBAwg9hADgQwM6qgbwLACgpQBycATgC4AWANHgQKJpk35QDKcYlzBA6sKkzwBfPHgA2wMlAAmASxIAuWAhTooAXmVI0qAHTFyFANx4AxnBCo4E3WLgBzABQApVgHlCugSVkh7sgDMAT0c5EgBKcJNcPFBIKAAReVYyHz8sWiJSSg0oACJCNwAlABUACTzuKAYBXLy6AEFWEsrM9k4KOvcAVXLWlj5azTyeOmb+kRjcCSkwgCYlJJIUtPtcpZXfe31s4zMLKxs7J1cPL1StwJD5yKMgA enum-json
+
+## Go enums seriaised to JSON
+.play -edit cmd/serial/main.go
+
+## Go enums seriaised with gob encoding
+.play -edit cmd/gob/main.go /var network/,/^}/

@@ -1,2 +1,3 @@
 *.swp
 *secret*
+dir_string.go
